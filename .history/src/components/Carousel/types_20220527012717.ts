@@ -42,8 +42,6 @@ export interface CarouselProps {
     onChange: (index: number, item: React.ReactNode) => void;
     onSwipeStart: (event: React.TouchEvent) => void;
     onSwipeEnd: (event: React.TouchEvent) => void;
-    onSwipeUp: (event: React.TouchEvent) => void;
-    onSwipeDown: (event: React.TouchEvent) => void;
     onSwipeMove: (event: React.TouchEvent) => boolean;
     preventMovementUntilSwipeScrollTolerance: boolean;
     renderArrowPrev: (clickHandler: () => void, hasPrev: boolean, label: string) => React.ReactNode;

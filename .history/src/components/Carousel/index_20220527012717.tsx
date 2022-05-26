@@ -41,8 +41,6 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
         onSwipeStart: () => {},
         onSwipeEnd: () => {},
         onSwipeMove: () => false,
-        onSwipeUp: () => false,
-        onSwipeDown: () => false,
         preventMovementUntilSwipeScrollTolerance: false,
         renderArrowPrev: (onClickHandler: () => void, hasPrev: boolean, label: string) => (
             <button type="button" aria-label={label} className={klass.ARROW_PREV(!hasPrev)} onClick={onClickHandler} />
@@ -477,22 +475,6 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
         return !!Object.keys(animationHandlerResponse).length;
     };
 
-    onSwipeUp = (event: React.TouchEvent) => {
-        this.props.onSwipeUp(event);
-
-        if (this.props.emulateTouch) {
-            this.setState({ cancelClick: true });
-        }
-    };
-
-    onSwipeDown = (event: React.TouchEvent) => {
-        this.props.onSwipeDown(event);
-
-        if (this.props.emulateTouch) {
-            this.setState({ cancelClick: true });
-        }
-    };
-
     /**
      * Decrements the selectedItem index a number of positions through the children list
      * @param positions
@@ -749,8 +731,6 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
             onSwipeMove: this.onSwipeMove,
             onSwipeStart: this.onSwipeStart,
             onSwipeEnd: this.onSwipeEnd,
-            onSwipeUp: this.onSwipeUp,
-            onSwipeDown: this.onSwipeDown,
             style: this.state.itemListStyle,
             tolerance: this.props.swipeScrollTolerance,
         };
@@ -760,8 +740,6 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
         if (isHorizontal) {
             swiperProps.onSwipeLeft = this.onSwipeForward;
             swiperProps.onSwipeRight = this.onSwipeBackwards;
-            swiperProps.onSwipeUp = this.onSwipeUp;
-            swiperProps.onSwipeDown = this.onSwipeDown;
 
             if (this.props.dynamicHeight) {
                 const itemHeight = this.getVariableItemHeight(this.state.selectedItem);

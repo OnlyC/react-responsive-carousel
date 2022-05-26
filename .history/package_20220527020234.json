@@ -1,6 +1,6 @@
 {
     "name": "react-responsive-carousel-up-down",
-    "version": "3.2.24",
+    "version": "3.2.23.1",
     "description": "React Responsive Carousel",
     "author": {
         "name": "Leandro Augusto Lemos",
@@ -110,13 +110,9 @@
         "react-easy-swipe": "^0.0.21"
     },
     "jest": {
-        "unmockedModulePathPatterns": [
-            "node_modules"
-        ],
+        "unmockedModulePathPatterns": ["node_modules"],
         "rootDir": "src",
-        "setupFilesAfterEnv": [
-            "../setupTests.js"
-        ]
+        "setupFilesAfterEnv": ["../setupTests.js"]
     },
     "husky": {
         "hooks": {

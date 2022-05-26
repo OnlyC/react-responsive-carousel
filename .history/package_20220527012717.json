@@ -23,10 +23,10 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/OnlyC/react-responsive-carousel.git"
+        "url": "https://github.com/leandrowd/react-responsive-carousel.git"
     },
     "bugs": {
-        "url": "https://github.com/OnlyC/react-responsive-carousel/issues"
+        "url": "https://github.com/leandrowd/react-responsive-carousel/issues"
     },
     "homepage": "http://leandrowd.github.io/react-responsive-carousel/",
     "scripts": {
@@ -110,13 +110,9 @@
         "react-easy-swipe": "^0.0.21"
     },
     "jest": {
-        "unmockedModulePathPatterns": [
-            "node_modules"
-        ],
+        "unmockedModulePathPatterns": ["node_modules"],
         "rootDir": "src",
-        "setupFilesAfterEnv": [
-            "../setupTests.js"
-        ]
+        "setupFilesAfterEnv": ["../setupTests.js"]
     },
     "husky": {
         "hooks": {

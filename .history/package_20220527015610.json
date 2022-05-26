@@ -1,5 +1,5 @@
 {
-    "name": "react-responsive-carousel-up-down",
+    "name": "@onlyc/react-responsive-carousel",
     "version": "3.2.22",
     "description": "React Responsive Carousel",
     "author": {
@@ -110,13 +110,9 @@
         "react-easy-swipe": "^0.0.21"
     },
     "jest": {
-        "unmockedModulePathPatterns": [
-            "node_modules"
-        ],
+        "unmockedModulePathPatterns": ["node_modules"],
         "rootDir": "src",
-        "setupFilesAfterEnv": [
-            "../setupTests.js"
-        ]
+        "setupFilesAfterEnv": ["../setupTests.js"]
     },
     "husky": {
         "hooks": {
